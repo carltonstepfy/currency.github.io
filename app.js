@@ -1,6 +1,6 @@
 var cacheName = 'my_pages';
 var filesToCache = [
-  'currency.github.io/',
+  '/currency.github.io/',
   '/currency.github.io/index.html',
   '/currency.github.io/js/bootstrap.min.js',
   '/currency.github.io/js/jquery.min.js',
