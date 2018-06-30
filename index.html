@@ -94,16 +94,16 @@
   var toCurrency = " EUR";
 
 
-function convertCurrency(amount, fromCurrency, toCurrency, cb) {
+async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
 
   fromCurrency = encodeURIComponent(fromCurrency);
   toCurrency = encodeURIComponent(toCurrency);
   var query = fromCurrency + '_' + toCurrency;
 
-  var url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
+  var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
             + query;
-            const json = url.json();
+            const json = await url.json();
 console.log(json);
 //   require('https').get(url, function(res){
 //       var body = '';
@@ -143,39 +143,6 @@ convertCurrency(10, 'USD', 'EUR', function(err, amount) {
 });
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- 
 
