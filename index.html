@@ -54,7 +54,7 @@
             <div class="form-group margin">
                 <label for="#" class="col-sm-3 control-label">Results:</label>
                 <div class="col-sm-9">
-                    <input type="text" name="" id="cb" class="form-control disabled" value="" required="required" pattern="" title="">
+                    <input type="text" name="" id="cb" class="form-control " value="" required="required" pattern="" title="" disabled>
                 </div>
             </div>
             <center>
@@ -92,6 +92,21 @@ amount = document.getElementById('amount');
 fromCurrency = document.getElementById('fromCurrency');
 toCurrency= document.getElementById('toCurrency');
 cd = document.getElementById('cd');
+
+const apikey = '';
+window.addEventListener('load', e => {
+    getCurrency()
+});
+
+async function getCurrency() {
+    const res ='https://www.currencyconverterapi.com/api/v5/convert?q=';
+}
+
+
+
+
+
+
 
   let https = requires('https');
 
