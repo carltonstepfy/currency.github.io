@@ -101,10 +101,11 @@ window.addEventListener('load', e => {
 async function getCurrencies() {
     const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
     const json = await res.json();
-    
-    fromCurrency.innerHTML = json.results
-    .map(src => '<option value="${src.id}">{src.currencySymbol} </option>')
-    .join('\n');
+    console.log(json);
+
+    // fromCurrency.innerHTML = json.results
+    // .map(src => '<option value="${src.id}">{src.currencySymbol} </option>')
+    // .join('\n');
     // json.results
     // //  .map(e => '<option value="${e.currencySymbol}"> ${e.currencySymbol} </option>')
     //  .join('\n');con
