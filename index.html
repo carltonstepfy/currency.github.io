@@ -92,7 +92,7 @@
   var amount = 100;
   var fromCurrency = "USD";
   var toCurrency = " EUR";
-  var https = require('https');
+
 
 function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
@@ -104,7 +104,7 @@ function convertCurrency(amount, fromCurrency, toCurrency, cb) {
   var url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
             + query;
 
-  https.get(url, function(res){
+  require('https').get(url, function(res){
       var body = '';
 
       res.on('data', function(chunk){
