@@ -102,12 +102,13 @@ async function getCurrencies() {
     const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
     const json = await res.json();
 
-    sourceSelector.innerHTML = json.results
-    //  .map(e => '<option value="${e.currencySymbol}"> ${e.currencySymbol} </option>')
+    fromCurrency.innerHTML = json.currencyName;
+    // json.results
+    // //  .map(e => '<option value="${e.currencySymbol}"> ${e.currencySymbol} </option>')
     //  .join('\n');con
-     console.log(.map(e => function(data) {
-         data.val();
-     }));
+    //  console.log(.map(e => function(data) {
+    //      data.val();
+    //  }));
 }
 
 
