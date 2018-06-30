@@ -102,9 +102,18 @@ async function getCurrencies() {
     const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
 
     const json = await res.json();
-    console.log(json);
-
-    // fromCurrency.innerHTML = json.results
+    const two = json.map(obj => {
+        const robj = {};
+        robj[obj.key] = obj.value;
+        return robj;
+    })
+    console.log(two);
+//     var reformattedArray = kvArray.map(obj =>{ 
+//    var rObj = {};
+//    rObj[obj.key] = obj.value;
+//    return rObj;
+// });
+//     // fromCurrency.innerHTML = json.results
     // .map(src => '<option value="${src.id}">{src.currencySymbol} </option>')
     // .join('\n');
     // json.results
