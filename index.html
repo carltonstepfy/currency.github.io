@@ -100,8 +100,9 @@ window.addEventListener('load', e => {
 
 async function getCurrencies() {
     const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
-    const json = await res.json();
-    console.log(json.currencyName);
+
+    const json = await res.json(json.currencyName);
+    console.log(json);
 
     // fromCurrency.innerHTML = json.results
     // .map(src => '<option value="${src.id}">{src.currencySymbol} </option>')
