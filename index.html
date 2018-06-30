@@ -103,9 +103,11 @@ async function getCurrencies() {
     const json = await res.json();
 
     sourceSelector.innerHTML = json.results
-     .map(e => '<option value="${e.currencySymbol}"> ${e.currencySymbol} </option>')
-     .join('\n');
-     
+    //  .map(e => '<option value="${e.currencySymbol}"> ${e.currencySymbol} </option>')
+    //  .join('\n');con
+     console.log(.map(e => function(data) {
+         data.val();
+     }));
 }
 
 
