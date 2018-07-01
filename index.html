@@ -261,6 +261,8 @@ const cd = document.getElementById('cd');
 
 convert.addEventListener('click', e => {
 const amounts = amount.value;
+const tofromCurrency = toCurrency.value;
+const fromtoCurrency = fromCurrency.value;
 //     async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
 
@@ -274,8 +276,8 @@ const amounts = amount.value;
 // console.log(json);
 // }
 console.log(amounts);
-console.log(toCurrency);
-console.log(fromCurrency);
+console.log(fromtoCurrency);
+console.log(tofromCurrency);
 console.log("Hello am working");
 });
 
