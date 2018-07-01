@@ -220,7 +220,7 @@
                 </div>
             </div>
             <center>
-            <button type="button" class="btn btn-primary margin">Convert</button>
+            <button type="button" class="btn btn-primary margin" id="convert" >Convert</button>
         </center>
             
             
@@ -251,22 +251,43 @@
 
 
 <script>
-  var amount = 100;
-  var fromCurrency = "USD";
-  var toCurrency = " EUR";
 
 
-async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
+const convert = document.getElementById('convert');
+const amount = document.getElementById('amount');
+const toCurrency = document.getElementById('toCurrency');
+const fromCurrency = document.getElementById('fromCurrency');
+const cd = document.getElementById('cd');
+
+convert.addEventListener('click', e => {
+
+    async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
 
-  fromCurrency = encodeURIComponent(fromCurrency);
-  toCurrency = encodeURIComponent(toCurrency);
-  var query = fromCurrency + '_' + toCurrency;
+ fromCurrency = encodeURIComponent(fromCurrency);
+ toCurrency = encodeURIComponent(toCurrency);
+ var query = fromCurrency + '_' + toCurrency;
 
-  var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
-            + query;
-            const json = await url.json();
+ var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+           + query;
+           const json = await url.json();
 console.log(json);
+
+});
+
+
+
+// async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
+ 
+
+//   fromCurrency = encodeURIComponent(fromCurrency);
+//   toCurrency = encodeURIComponent(toCurrency);
+//   var query = fromCurrency + '_' + toCurrency;
+
+//   var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+//             + query;
+//             const json = await url.json();
+// console.log(json);
 //   require('https').get(url, function(res){
 //       var body = '';
 
