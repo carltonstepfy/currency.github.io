@@ -272,6 +272,7 @@ convert.addEventListener('click', e => {
            + query;
            const json = await url.json();
 console.log(json);
+}
 
 });
 
@@ -317,7 +318,7 @@ console.log(json);
 //         console.log("Got an error: ", e);
 //         cb(e);
 //   });
-}
+//}
 
 //uncomment to test
 
@@ -332,26 +333,26 @@ console.log(json);
   <script>
 
 
-// amount = document.getElementById('amount');
-// fromCurrency = document.getElementById('fromCurrency');
-// toCurrency= document.getElementById('toCurrency');
-// cd = document.getElementById('cd');
+// // amount = document.getElementById('amount');
+// // fromCurrency = document.getElementById('fromCurrency');
+// // toCurrency= document.getElementById('toCurrency');
+// // cd = document.getElementById('cd');
 
-const fromCurrency = document.querySelector('#fromCurrency');
-window.addEventListener('load', e => {
-    getCurrencies()
-});
+// const fromCurrency = document.querySelector('#fromCurrency');
+// window.addEventListener('load', e => {
+//     getCurrencies()
+// });
 
-async function getCurrencies() {
-    const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
+// async function getCurrencies() {
+//     const res = await fetch('https://free.currencyconverterapi.com/api/v5/currencies');
 
-    const json = await res.json();
-    const two = json.map(obj => {
-        const robj = {};
-        robj[obj.key] = obj.value;
-        return robj;
-    })
-    console.log(two);
+//     const json = await res.json();
+//     const two = json.map(obj => {
+//         const robj = {};
+//         robj[obj.key] = obj.value;
+//         return robj;
+//     })
+//     console.log(two);
 //     var reformattedArray = kvArray.map(obj =>{ 
 //    var rObj = {};
 //    rObj[obj.key] = obj.value;
