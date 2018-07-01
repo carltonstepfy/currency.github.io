@@ -304,6 +304,7 @@ const fromtoCurrency = fromCurrency.value;
 }
 convertCurrency(amounts, fromtoCurrency, tofromCurrency, function(err, amount) {
   console.log(amount);
+  cb.innerHTML = amount;
 });
 // console.log(json);
 // console.log(amounts);
