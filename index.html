@@ -264,9 +264,9 @@ const amounts = amount.value;
 const tofromCurrency = toCurrency.value;
 const fromtoCurrency = fromCurrency.value;
 
-    async function convertCurrency(amounts, fromtoCurrency, tofromCurrency, cb) {
+    async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
- const query = fromtoCurrency + '_' + tofromCurrency;
+ const query = fromCurrency + '_' + toCurrency;
 
  const url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
            + query;
