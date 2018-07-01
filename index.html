@@ -266,13 +266,13 @@ const fromtoCurrency = fromCurrency.value;
 
     async function convertCurrency(amounts, fromtoCurrency, tofromCurrency, cb) {
  
- var query = fromtoCurrency + '_' + tofromCurrency;
+ const query = fromtoCurrency + '_' + tofromCurrency;
 
- var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+ const url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
            + query;
 
  get(url, function(res){
-      var body = '';
+      const body = '';
 
       res.on('data', function(chunk){
           body += chunk;
@@ -280,14 +280,14 @@ const fromtoCurrency = fromCurrency.value;
 
       res.on('end', function(){
           try {
-            var jsonObj = JSON.parse(body);
+            const jsonObj = JSON.parse(body);
 
-            var val = jsonObj[query];
+            const val = jsonObj[query];
             if (val) {
-              var total = val * amount;
+               const total = val * amount;
               cb(null, Math.round(total * 100) / 100);
             } else {
-              var err = new Error("Value not found for " + query);
+                const  err = new Error("Value not found for " + query);
               console.log(err);
               cb(err);
             }
