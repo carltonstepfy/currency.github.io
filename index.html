@@ -268,7 +268,7 @@ const fromtoCurrency = fromCurrency.value;
  
  const query = fromCurrency + '_' + toCurrency;
 
- const url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+ const url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
            + query;
 
  get(url, function(res){
