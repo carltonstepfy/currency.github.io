@@ -263,18 +263,18 @@ convert.addEventListener('click', e => {
 const amounts = amount.value;
 const tofromCurrency = toCurrency.value;
 const fromtoCurrency = fromCurrency.value;
-//     async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
+
+    async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
 
-//  fromCurrency = encodeURIComponent(fromCurrency);
-//  toCurrency = encodeURIComponent(toCurrency);
-//  var query = fromCurrency + '_' + toCurrency;
+ 
+ var query = fromtoCurrency + '_' + tofromCurrency;
 
-//  var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
-//            + query;
-//            const json = await url.json();
-// console.log(json);
-// }
+ var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+           + query;
+           const json = await url.json();
+console.log(json);
+}
 console.log(amounts);
 console.log(fromtoCurrency);
 console.log(tofromCurrency);
