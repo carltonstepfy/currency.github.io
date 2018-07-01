@@ -261,19 +261,19 @@ const cd = document.getElementById('cd');
 
 convert.addEventListener('click', e => {
 
-    async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
+//     async function convertCurrency(amount, fromCurrency, toCurrency, cb) {
  
 
- fromCurrency = encodeURIComponent(fromCurrency);
- toCurrency = encodeURIComponent(toCurrency);
- var query = fromCurrency + '_' + toCurrency;
+//  fromCurrency = encodeURIComponent(fromCurrency);
+//  toCurrency = encodeURIComponent(toCurrency);
+//  var query = fromCurrency + '_' + toCurrency;
 
- var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
-           + query;
-           const json = await url.json();
-console.log(json);
-}
-
+//  var url = await fetch('https://free.currencyconverterapi.com/api/v5/convert?q=')
+//            + query;
+//            const json = await url.json();
+// console.log(json);
+// }
+console.log("Hello am working");
 });
 
 
